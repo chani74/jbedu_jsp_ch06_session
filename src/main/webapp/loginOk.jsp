@@ -18,7 +18,7 @@
 		session.setAttribute("sessionID", mid);
 		session.setAttribute("validMem", "yes");
 		
-		out.println("로그인 성공!!")
+		out.println(mid+"님 로그인 성공!!")
 	} else {
 		out.println("로그인 실패!! 아이디와 비번을 다시 확인하세요.")
 	}
