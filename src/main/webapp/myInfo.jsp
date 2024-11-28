@@ -17,19 +17,21 @@
 	if(validMem != null ) {
 		out.println(sessionId+"님 로그인 중입니다.");
 		Enumeration enuSession = session.getAttributeNames();
+		
 		while (enuSession.hasMoreElements()){
 			String sessionName = enuSession.nextElement().toString();
 			System.out.println(sessionName);
 			String sessionValue = (String) session.getAttribute(sessionName);
 			System.out.println(sessionValue);
-			
 		}
+ 
 	} else {
 		response.sendRedirect("login.jsp");
 	}
 %>
 	<br><br>
-	<a href='logout.jsp'>로그아웃	</a>
+	<a href='logout.jsp'>로그아웃	</a><br>
+	<a href='sessionTime.jsp'>세션타임	</a>
 	
 </body>
 </html>
